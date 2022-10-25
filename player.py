@@ -17,6 +17,14 @@ class Player(Turtle):
     def up(self):
         self.forward(MOVE_DISTANCE)
 
-    def game_over(self):
-        if self.ycor() == FINISH_LINE_Y:
-            print("Win")
+    def finishline(self):
+        if self.ycor() > FINISH_LINE_Y:
+            return True
+        else:
+            return False
+
+    def one_crossing(self):
+        if self.finishline():
+            self.goto(STARTING_POSITION)
+            return True
+
