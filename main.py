@@ -21,5 +21,5 @@ while game_is_on:
     screen.update()
 
     player.game_over()
-    car_manager.generate_cars()
+    car_manager.generate_car()
     car_manager.movement()
